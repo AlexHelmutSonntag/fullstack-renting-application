@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ImagesLandlordDetails() {
   return (
     <div className="ImagesLandlordDetails">
-      <div className="offer-images"></div>
+      <div className="offer-images"/>
       <div className="landlord-details">
         <div className="image-name">
           <div className="img">

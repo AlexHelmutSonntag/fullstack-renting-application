@@ -9,7 +9,6 @@ import authMiddleware from "./middlewares/auth.middleware";
 // protect from csrf attack. more here https://en.wikipedia.org/wiki/Cross-site_request_forgery
 const csrfMiddleware = csrf({ cookie: true });
 
-const PORT = process.env.PORT || 3000;
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
@@ -18,6 +17,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    const PORT = process.env.PORT || 3000;
 
     server.use(bodyParser.json());
     server.use(cookieParser());
